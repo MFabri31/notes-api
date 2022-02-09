@@ -12,13 +12,12 @@ app.use(logger)
 let notes = [
     {
         'id':1,
-        'content':'run', 
+        'content':'Run', 
         'important':false
     },
     {
         'id':2,
-        'content':'read', 
-   
+        'content':'Read', 
         'important':true
     },
     {
@@ -77,7 +76,8 @@ app.use((request,response) => {
 })
 
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001
+
 app.listen(PORT,() => {
     console.log(`Server running on port ${PORT}`)
 })
